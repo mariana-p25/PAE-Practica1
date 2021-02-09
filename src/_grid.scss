@@ -23,15 +23,19 @@ $colors-border: (
 
 @mixin box-style {
     text-align: center;
-    font-weight: bold;
-    font-family: 'Courier New';
+    font-family: 'Trebuchet MS';
     padding: 15px;
     border-radius: 5px;
 }
 
+img {
+    width: 50%;
+}
+
 .grid {
-    display: flex;
-    margin: 10px;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-gap: 10px;
 }
 
 @import '_gridSecondary';
