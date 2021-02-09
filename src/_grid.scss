@@ -1,0 +1,37 @@
+$base: 12;
+$sizes: 3, 6, 9, 12;
+$sizes_2: 3, 6, 12;
+$sizes_3: 3, 12;
+
+$colors: (
+    3: pink,
+    6: lightblue,
+    9: plum,
+    12: lightsalmon
+);
+
+$colors-border: (
+    3:rosybrown,
+    6: skyblue,
+    9: purple,
+    12: salmon
+);
+
+@function getWidth($col){
+    @return ($col / $base) * 100%;
+}
+
+@mixin box-style {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Courier New';
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.grid {
+    display: flex;
+    margin: 10px;
+}
+
+@import '_gridSecondary';

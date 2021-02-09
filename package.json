@@ -1,0 +1,33 @@
+{
+  "name": "pae-practica1",
+  "version": "1.0.0",
+  "description": "practica 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "serve": "http-server dist",
+    "start": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariana-p25/PAE-Practica1.git"
+  },
+  "keywords": [
+    "news"
+  ],
+  "author": "MPA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariana-p25/PAE-Practica1/issues"
+  },
+  "homepage": "https://github.com/mariana-p25/PAE-Practica1#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.1.0",
+    "gulp-typescript": "^6.0.0-alpha.1",
+    "gulp-webserver": "^0.9.1",
+    "http-server": "^0.12.3",
+    "sass": "^1.32.6",
+    "typescript": "^4.1.3"
+  }
+}
