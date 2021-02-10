@@ -12,19 +12,19 @@
 <body>
     <h1>News App</h1>
 
-    <div class="input">
-        <input type="text" placeholder="Inserta una palabra clave">
-        <button>Go</button>
+    <div class="search">
+        <input type="text" placeholder="Inserta una palabra clave" id="keyword">
+        <button id="buscar">Buscar</button>
     </div>
 
-    <div id="news-container">
+    <div id="news">
         <div class="grid">
             {{#each news}}
-                <div class="c-9">
+                <div class="article">
                     <img src="{{urlToImage}}" />
                     <h2>{{title}}</h2>
                     <p>{{description}}</p>
-                    <a href="{{url}}" target="_blank">Ver más</a>
+                    <a href="{{url}}" target="_blank">Ver más...</a>
                 </div>
             {{/each}}
         </div>

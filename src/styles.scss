@@ -1,7 +1,8 @@
 @import '_grid';
 
 html, body{
-    background-color: darkslategray;
+    background-color: slategray;
+    width: 98%;
 }
 
 h1{
@@ -10,6 +11,34 @@ h1{
     text-align: center;
 }
 
-.input{
-    text-align: center;
+input, button{
+    width: 75%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 35px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-color: rosybrown;
+    background-color: pink;
+    font-family: 'Trebuchet MS';
+}
+
+button{
+    border-color: plum;
+    background-color: plum;
+    font-weight: bold;
+    font-size: large;
+}
+
+a{
+    background-color: purple;
+    padding: 8px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }
