@@ -36,7 +36,7 @@ html, body {
   background-color: slategray;
   width: 98%; }
 
-h1 {
+h1, p {
   color: whitesmoke;
   font-family: 'Trebuchet MS';
   text-align: center; }
@@ -59,7 +59,14 @@ button {
   font-weight: bold;
   font-size: large; }
 
-a {
+button:hover {
+  background-color: violet; }
+
+p a {
+  color: skyblue;
+  text-decoration: none; }
+
+.article a {
   background-color: purple;
   padding: 8px;
   border-radius: 10px;
