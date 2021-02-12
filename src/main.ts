@@ -3,11 +3,11 @@ declare var Handlebars: any;
 const templateSource = document.getElementById('news').innerHTML;
 const template = Handlebars.compile(templateSource);
 
-async function loadNews(keyword) {
+function loadNews(keyword) {
     var url = 'https://newsapi.org/v2/everything?q=' + keyword + '&apiKey=df468393b9de44d490f48eebd19ff40f';
     var req = new Request(url);
 
-    await fetch(req)
+    fetch(req)
         .then((res) => res.json())
         .then((json) => {
             document.getElementById('news').innerHTML = template({
