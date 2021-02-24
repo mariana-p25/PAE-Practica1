@@ -2,7 +2,7 @@
   "name": "pae-practica1",
   "version": "1.0.0",
   "description": "practica 1",
-  "main": "index.js",
+  "main": "public/controllers/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "http-server dist",
@@ -30,5 +30,8 @@
     "http-server": "^0.12.3",
     "sass": "^1.32.6",
     "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
