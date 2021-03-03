@@ -17,12 +17,19 @@ function loadNews(keyword) {
     });
 }
 
-window.addEventListener('load', () => {
-    
-});
-
 document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('news').innerHTML = '';
+
+    document.getElementById('registro').addEventListener('click', () => {
+        fetch('/registro', {method: 'GET'})
+            .then((res) => {
+                console.log(res);
+                if(res.ok) {
+                    window.location.href = "/registro";
+                }
+            });
+    });
+
     document.getElementById('buscar').addEventListener('click', () => {
         let key = document.getElementById("keyword");
         loadNews(key.value);

@@ -1,0 +1,51 @@
+html,
+body {
+    background-color: slategray;
+    width: 98%;
+}
+
+input:not(:last-of-type) {
+    width: 75%;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 35px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border-color: lightseagreen;
+    background-color: lightblue;
+    font-family: 'Trebuchet MS';
+    font-size:inherit;
+}
+
+form p {
+    margin-right: auto;
+    margin-left: auto;
+    color: ivory;
+    text-align: center;
+    font-family: 'Trebuchet MS';
+}
+
+input:last-of-type {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+    background-color: cornsilk;
+}
+
+button {
+    border-color: plum;
+    background-color: plum;
+    font-weight: bold;
+    font-size: large;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 35px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: violet;
+}
