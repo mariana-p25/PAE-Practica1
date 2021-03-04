@@ -29,7 +29,7 @@ class Database {
         });
 
         setTimeout(() => {
-            console.log('Database connection timeout', db);
+            //console.log('Database connection timeout', db);
         }, 2000);
     }
 
@@ -44,12 +44,12 @@ class Database {
             correo: user.email,
             pass: user.password,
             image: imagen
-        }).then(() => {
-            console.log("Insert successful");
+        }).then((r) => {
+            console.log("Insertado");
         }).catch(err => {
-            console.log("Failed to insert", err);
+            console.log("Falló al insertar", err);
         });
     }
 }
 
-module.exports = new Database();
+module.exports = Database;

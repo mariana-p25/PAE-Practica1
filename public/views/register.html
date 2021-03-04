@@ -8,17 +8,12 @@
     <title>Registro</title>
 </head>
 <body>
-    <form action="/registro" method="POST" enctype="multipart/form-data">
+    <form action="/" method="POST" enctype="multipart/form-data">
         <input type="text" name="name" placeholder="Nombre"> <br>
         <input type="text" name="email" placeholder="Correo"> <br>
         <input type="text" name="password" placeholder="Contraseña"> <br>
         <p>Seleccionar foto de perfil</p><input type="file" name="profilePic">
-        <button id="enviar">Enviar</button>
+        <button>Enviar</button>
     </form>
-
-    <div id="response">
-
-    </div>
-    <script src="../models/js/register.js"></script>
 </body>
 </html>

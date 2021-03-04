@@ -1,11 +1,13 @@
 const express = require('express');
 const multer = require('multer');
 const path = require('path');
-const database = require('../models/database');
+const Database = require('../models/database');
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
+
+let db = new Database();
 
 app.use(express.static(path.join(__dirname, '../')));
 
@@ -14,11 +16,11 @@ app.listen(PORT, () => {
 });
 
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'index.html'));
+    res.sendFile(path.join(__dirname, '../', 'views', 'register.html'));
 });
 
-app.get('/registro', (req, res) => {
-    res.sendFile(path.join(__dirname, '../', 'views', 'register.html'));
+app.get('/index', (req, res) => {
+    res.sendFile(path.join(__dirname, '../', 'views', 'index.html'));
 });
 
 const multerStorage = multer.diskStorage({
@@ -40,13 +42,13 @@ const uploadFile = multer({
     fileFilter: fileFilter
 });
 
-app.post('/registro', uploadFile.single('profilePic'), (req, res) => {
+app.post('/', uploadFile.single('profilePic'), (req, res) => {
     if (req.file) {
-        console.log('Imagen aceptada');
-        database.useCollection('usuarios');
-        database.insertUser(req.body, req.file.originalname);
-    } else {
-        console.log('File not supported');
+        if (req.body.name && req.body.email && req.body.password) {
+            console.log('Usuario aceptado');
+            db.useCollection('usuarios');
+            db.insertUser(req.body, req.file.filename);
+            res.redirect('/index');
+        }
     }
-    //res.sendFile(path.join(__dirname, '../', 'views', 'register.html'));
 });

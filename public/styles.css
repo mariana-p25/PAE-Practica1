@@ -5,43 +5,58 @@
   padding: 15px;
   border-radius: 5px;
   background-color: seashell;
-  border: 3px solid darkorchid; }
+  border: 3px solid darkorchid;
+}
 
 img {
-  width: 100%; }
+  width: 100%;
+}
 
 @media only screen and (min-width: 1200px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(4, 24%);
-    grid-gap: 20px; } }
+    grid-gap: 20px;
+  }
+}
 
 @media only screen and (max-width: 1200px) and (min-width: 900px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 33%);
-    grid-gap: 20px; } }
+    grid-gap: 20px;
+  }
+}
 
 @media only screen and (max-width: 900px) and (min-width: 700px) {
   .grid {
     display: grid;
     grid-template-columns: repeat(2, 50%);
-    grid-gap: 20px; } }
+    grid-gap: 20px;
+  }
+}
 
 @media only screen and (max-width: 700px) {
   .grid {
-    display: block; } }
+    display: block;
+  }
+}
 
-html, body {
+html,
+body {
   background-color: slategray;
-  width: 98%; }
+  width: 98%;
+}
 
-h1, p {
+h1,
+p {
   color: whitesmoke;
   font-family: 'Trebuchet MS';
-  text-align: center; }
+  text-align: center;
+}
 
-input, button {
+input,
+button {
   width: 75%;
   display: block;
   margin-right: auto;
@@ -51,37 +66,48 @@ input, button {
   margin-bottom: 10px;
   border-color: rosybrown;
   background-color: pink;
-  font-family: 'Trebuchet MS'; }
+  font-family: 'Trebuchet MS';
+}
 
 button {
   border-color: plum;
   background-color: plum;
   font-weight: bold;
-  font-size: large; }
+  font-size: large;
+}
 
 button:hover {
-  background-color: violet; }
+  background-color: violet;
+}
 
 p {
-  color: darkslategray; }
+  color: darkslategray;
+}
 
 p a {
   color: skyblue;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .article a {
   background-color: purple;
   padding: 8px;
   border-radius: 10px;
   color: white;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 a:hover {
-  text-decoration: underline; }
+  text-decoration: underline;
+}
 
-#registro{
+#registro {
   width: min-content;
   background-color: palevioletred;
   border-color: palevioletred;
   font-weight: lighter;
+}
+
+.modal {
+  display: none;
 }
