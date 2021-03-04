@@ -26,7 +26,6 @@ const multerStorage = multer.diskStorage({
         cb(null, path.join(__dirname, '../', 'images'));
     },
     filename: (req, file, cb) => {
-        //console.log('File', file);
         cb(null, file.originalname);
     }
 });
@@ -44,10 +43,10 @@ const uploadFile = multer({
 app.post('/registro', uploadFile.single('profilePic'), (req, res) => {
     if (req.file) {
         console.log('Imagen aceptada');
+        database.useCollection('usuarios');
+        database.insertUser(req.body, req.file.originalname);
     } else {
         console.log('File not supported');
     }
-    
-    database.useCollection('usuarios');
-    database.insertUser(req.body);
+    //res.sendFile(path.join(__dirname, '../', 'views', 'register.html'));
 });

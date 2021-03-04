@@ -6,7 +6,6 @@ const apiKey = 'df468393b9de44d490f48eebd19ff40f';
 
 function loadNews(keyword) {
     var url = 'https://newsapi.org/v2/everything?q=' + keyword + '&apiKey=' + apiKey;
-    console.log(url);
     var req = new Request(url);
     fetch(req)
         .then((res) => res.json())
@@ -23,7 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('registro').addEventListener('click', () => {
         fetch('/registro', {method: 'GET'})
             .then((res) => {
-                console.log(res);
                 if(res.ok) {
                     window.location.href = "/registro";
                 }

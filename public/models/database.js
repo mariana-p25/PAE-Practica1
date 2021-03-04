@@ -35,15 +35,15 @@ class Database {
 
     useCollection(name) {
         this.collectionName = name;
-        console.log(this.collectionName);
     }
 
-    insertUser(user){
+    insertUser(user, imagen){
         const collection = db.collection(this.collectionName);
         collection.insertOne({
             nombre: user.name,
             correo: user.email,
             pass: user.password,
+            image: imagen
         }).then(() => {
             console.log("Insert successful");
         }).catch(err => {

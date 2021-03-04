@@ -15,10 +15,10 @@ input:not(:last-of-type) {
     border-color: lightseagreen;
     background-color: lightblue;
     font-family: 'Trebuchet MS';
-    font-size:inherit;
+    font-size: inherit;
 }
 
-form p {
+p {
     margin-right: auto;
     margin-left: auto;
     color: ivory;
